@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/grid.css" />
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/portfolio.css" />
-    <title>Bikcraft - Portfolio</title>
+    <link rel="stylesheet" href="css/contato.css" />
+    <title>Bikcraft - Contato</title>
   </head>
   <body>
     <header class="header">
@@ -20,45 +20,67 @@
           <ul>
             <li><a href="sobre.html">Sobre</a></li>
             <li><a href="produtos.html">Produtos</a></li>
-            <li><a href="portfolio.html" class="menu_ativo">Portfolio</a></li>
-            <li><a href="contato.html">Contato</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="contato.html" class="menu_ativo">Contato</a></li>
           </ul>
         </nav>
       </div>
     </header>
 
-    <section class="introducao_interna interna_portfolio">
+    <section class="introducao_interna interna_contato">
       <div class="container">
-        <h1>portfólio</h1>
-        <p>conheça os projetos que amamos mostrar</p>
+        <h1>contato</h1>
+        <p>tire as suas dúvidas com a gente</p>
       </div>
     </section>
 
-    <section class="container">
-      <blockquote class="quote_clientes">
-        <p>
-          "No mundo atual, a continua expansão da nossa atividade cumpre um
-          papel essencial na formação da gestão inovadora da qual fazemos
-          parte."
-        </p>
-        <cite>Barbara Moss</cite>
-      </blockquote>
-    </section>
+    <section class="contato container">
+      <form id="form_contato" class="contato_form grid-8">
+        <label for="nome">Nome</label>
+        <input type="text" id="nome" />
 
-    <section class="portfolio">
-      <div class="container">
-        <ul class="portfolio_lista">
-          <li class="grid-8">
-            <img src="img/portfolio/retro.jpg" alt="Bicicleta Retro" />
+        <label for="email">E-mail</label>
+        <input type="text" id="email" />
+
+        <label for="telefone">Telefone</label>
+        <input type="text" id="telefone" />
+
+        <label for="espec">Especificações</label>
+        <textarea type="text" id="espec"></textarea>
+
+        <button type="submit" class="btn btn_preto">Enviar</button>
+      </form>
+      <div class="contato_dados grid-8">
+        <h3>dados</h3>
+        <span>+55 21 9999-9999</span>
+        <span>orçamento@bikcraft.com</span>
+        <span>Rua Ali Perto - Centro Histórico</span>
+        <span>Porto Alegre - RS - Brasil</span>
+        <h3>Redes Sociais</h3>
+        <ul>
+          <li>
+            <a href="http://facebook.com" target="_blank"
+              ><img src="img/redes-sociais/facebook.svg" alt="Facebook"
+            /></a>
           </li>
-          <li class="grid-8">
-            <img src="img/portfolio/passeio.jpg" alt="Bicicleta Passeio" />
+          <li>
+            <a href="http://instagram.com" target="_blank"
+              ><img src="img/redes-sociais/instagram.svg" alt="Instagram"
+            /></a>
           </li>
-          <li class="grid-16">
-            <img src="img/portfolio/esporte.jpg" alt="Bicicleta Esporte" />
+          <li>
+            <a href="http://twitter.com" target="_blank"
+              ><img src="img/redes-sociais/twitter.svg" alt="Twitter"
+            /></a>
           </li>
         </ul>
       </div>
+    </section>
+
+    <section class="container contato_mapa">
+      <a href="http://google.com" target="_blank" class="grid-16"
+        ><img src="img/endereco-bikcraft.jpg" alt="Endereco Bikcraft"
+      /></a>
     </section>
 
     <section class="quebra">

@@ -13,6 +13,10 @@ img {
   display: block;
 }
 
+button {
+  cursor: pointer;
+}
+
 .btn {
   border: 3px solid #fec63e;
   padding: 10px 30px;
