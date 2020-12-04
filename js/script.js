@@ -24,3 +24,7 @@ if(window.SimpleForm) {
     sucesso: "<div id='form-sucesso'><h2>Formulário enviado com sucesso</h2><p>Em breve eu entro em contato com você.</p></div>", // mensagem de sucesso
   })
 }
+
+document.querySelector('#submit_button').addEventListener('click', e => {
+  e.preventDefault();
+})
