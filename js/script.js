@@ -25,6 +25,8 @@ if(window.SimpleForm) {
   })
 }
 
-document.querySelector('#submit_button').addEventListener('click', e => {
-  e.preventDefault();
-})
+if(document.querySelector('#submit_button')) {
+  document.querySelector('#submit_button').addEventListener('click', e => {
+    e.preventDefault();
+  })
+}
