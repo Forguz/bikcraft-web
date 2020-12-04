@@ -3,12 +3,30 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/normalize.css" />
-    <link rel="stylesheet" href="css/reset.css" />
-    <link rel="stylesheet" href="css/grid.css" />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/portfolio.css" />
-    <title>Bikcraft - Portfolio</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <title>Bikcraft - Conheça o portfolio de clientes</title>
+
+    <meta
+      name="description"
+      content="Compre a sua bicicleta personalizada na Bikcraft. Possuímos modelos Passeio, Retrô e Esporte."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Bikcraft - Conheça o portfolio de clientes" />
+    <meta
+      property="og:description"
+      content="Compre a sua bicicleta personalizada na Bikcraft. Possuímos modelos Passeio, Retrô e Esporte."
+    />
+    <meta property="og:url" content="http://bikcraft.com/portfolio.html" />
+    <meta property="og:image" content="http://bikcraft.com/img/og-image.png" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+
+    <script>document.documentElement.classList.add('js');</script>
+    <script src="js/simple-slide.js" defer></script>
+    <script src="js/simple-anime.js" defer></script>
+    <script src="./js/script.js" defer></script>
   </head>
   <body>
     <header class="header">
@@ -29,24 +47,40 @@
 
     <section class="introducao_interna interna_portfolio">
       <div class="container">
-        <h1>portfólio</h1>
-        <p>conheça os projetos que amamos mostrar</p>
+        <h1 data-anime="400" class="fadeInDown">portfólio</h1>
+        <p data-anime="800" class="fadeInDown">conheça os projetos que amamos mostrar</p>
       </div>
     </section>
 
-    <section class="container">
+    <section class="container fadeInDown" data-slide="quote" data-anime="1200">
+      <blockquote class="quote_clientes">
+        <p>
+          "Pedalar sempre foi a minha paixão, o que o pessoal da Bikcraft
+          fez foi intensificar o meu amor por esta atividade. Recomendo à
+          todos que amo."
+        </p>
+        <cite>Barbara Moss</cite>
+      </blockquote>
       <blockquote class="quote_clientes">
         <p>
           "No mundo atual, a continua expansão da nossa atividade cumpre um
           papel essencial na formação da gestão inovadora da qual fazemos
           parte."
         </p>
-        <cite>Barbara Moss</cite>
+        <cite>Johny Rato</cite>
+      </blockquote>
+      <blockquote class="quote_clientes">
+        <p>
+          "Aqueles que ainda não possuem uma Bikcraft, não sabem o que
+          estão perdendo. A precisão é absurda e a velocidade transcedental.
+          Nunca vi nada igual."
+        </p>
+        <cite>Bernardo</cite>
       </blockquote>
     </section>
 
     <section class="portfolio">
-      <div class="container">
+      <div class="container" data-slide="portfolio">
         <ul class="portfolio_lista">
           <li class="grid-8">
             <img src="img/portfolio/retro.jpg" alt="Bicicleta Retro" />
@@ -58,10 +92,21 @@
             <img src="img/portfolio/esporte.jpg" alt="Bicicleta Esporte" />
           </li>
         </ul>
+        <ul class="portfolio_lista">
+          <li class="grid-8">
+            <img src="img/portfolio/passeio.jpg" alt="Bicicleta Passeio" />
+          </li>
+          <li class="grid-8">
+            <img src="img/portfolio/retro.jpg" alt="Bicicleta Retro" />
+          </li>
+          <li class="grid-16">
+            <img src="img/portfolio/esporte.jpg" alt="Bicicleta Esporte" />
+          </li>
+        </ul>
       </div>
     </section>
 
-    <section class="quebra">
+    <div class="quebra">
       <blockquote class="quote_externo container">
         <p>
           "O verdadeiro segredo da felicidade está em ter um genuíno interesse
@@ -69,7 +114,7 @@
         </p>
         <cite>William Morris</cite>
       </blockquote>
-    </section>
+    </div>
 
     <footer>
       <div class="footer">

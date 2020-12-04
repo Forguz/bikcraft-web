@@ -3,12 +3,31 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/normalize.css" />
-    <link rel="stylesheet" href="css/reset.css" />
-    <link rel="stylesheet" href="css/grid.css" />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/sobre.css" />
+    <link rel="stylesheet" href="css/main.css" />
     <title>Bikcraft - Sobre</title>
+
+    <meta
+      name="description"
+      content="Compre a sua bicicleta personalizada na Bikcraft. Possuímos modelos Passeio, Retrô e Esporte."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Bikcraft - Saiba mais sobre a gente" />
+    <meta
+      property="og:description"
+      content="Compre a sua bicicleta personalizada na Bikcraft. Possuímos modelos Passeio, Retrô e Esporte."
+    />
+    <meta property="og:url" content="http://bikcraft.com/sobre.html" />
+    <meta property="og:image" content="http://bikcraft.com/img/og-image.png" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+
+    <script>
+      document.documentElement.classList.add("js");
+    </script>
+    <script src="./js/simple-anime.js" defer></script>
+    <script src="./js/script.js" defer></script>
   </head>
   <body>
     <header class="header">
@@ -29,23 +48,23 @@
 
     <section class="introducao_interna interna_sobre">
       <div class="container">
-        <h1>sobre</h1>
-        <p>conheça mais sobre a bikcraft</p>
+        <h1 data-anime="400" class="fadeInDown">sobre</h1>
+        <p data-anime="800" class="fadeInDown">conheça mais sobre a bikcraft</p>
       </div>
     </section>
 
-    <section class="missao_sobre container">
+    <section class="missao_sobre container fadeInDown" data-anime="1200">
       <div class="grid-10">
         <h2 class="subtitulo_interno">História, Missão e Visão</h2>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation.
+          Quando iniciamos a Bikcraft queriamos apenas um produto que
+          adoraríamos utilizar. Eramos apaixonados por pedalar e também por
+          fazer as coisas com as nossas próprias mãos. Assim surgiu um sonho na
+          garagem da nossa casa.
         </p>
         <p>
-          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-          dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-          proident
+          Conheça os nossos produtos, pergunte para os nossos clientes e
+          descubra a maravilha de ter uma Bikcraft na sua casa.
         </p>
       </div>
       <div class="grid-6">
@@ -58,7 +77,7 @@
         </ul>
       </div>
       <div class="grid-16 foto_equipe">
-        <img src="img/equipe-bikcraft.jpg" alt="Equipe Bikcraft">
+        <img src="img/equipe-bikcraft.jpg" alt="Equipe Bikcraft" />
       </div>
     </section>
 
@@ -69,29 +88,29 @@
         <li class="grid-1-3">
           <h3>Durabilidade</h3>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore
+            Sólida como pedra, leve como o vento e resistente como o diamante,
+            são nossos diferenciais.
           </p>
         </li>
         <li class="grid-1-3">
           <h3>Design</h3>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore
+            Feitas sob medida para o melhor conforto e eficiência. Adaptamos a
+            sua Bikcraft para o seu corpo.
           </p>
         </li>
         <li class="grid-1-3">
           <h3>Sustentabilidade</h3>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore
+            Além de ajudar a cuidar do meio ambiente, tirando carros da rua,
+            toda a produção é sustentável.
           </p>
         </li>
       </ul>
     </section>
     <!-- Fecha qualidade -->
 
-    <section class="quebra">
+    <div class="quebra">
       <blockquote class="quote_externo container">
         <p>
           "O verdadeiro segredo da felicidade está em ter um genuíno interesse
@@ -99,7 +118,7 @@
         </p>
         <cite>William Morris</cite>
       </blockquote>
-    </section>
+    </div>
 
     <footer>
       <div class="footer">

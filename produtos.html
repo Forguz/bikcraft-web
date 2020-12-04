@@ -3,12 +3,32 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/normalize.css" />
-    <link rel="stylesheet" href="css/reset.css" />
-    <link rel="stylesheet" href="css/grid.css" />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/produtos.css" />
-    <title>Bikcraft - Produtos</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <title>Bikcraft - Conheça as linhas Passeio, Retro e Esporte</title>
+
+    <meta
+      name="description"
+      content="Compre a sua bicicleta personalizada na Bikcraft. Possuímos modelos Passeio, Retrô e Esporte."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Bikcraft - Conheça as linhas Passeio, Retro e Esporte" />
+    <meta
+      property="og:description"
+      content="Compre a sua bicicleta personalizada na Bikcraft. Possuímos modelos Passeio, Retrô e Esporte."
+    />
+    <meta property="og:url" content="http://bikcraft.com/produtos.html" />
+    <meta property="og:image" content="http://bikcraft.com/img/og-image.png" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+
+    <script>
+      document.documentElement.classList.add("js");
+    </script>
+    <script src="./js/simple-anime.js" defer></script>
+    <script src="./js/simple-form.js" defer></script>
+    <script src="./js/script.js" defer></script>
   </head>
   <body>
     <header class="header">
@@ -29,18 +49,20 @@
 
     <section class="introducao_interna interna_produtos">
       <div class="container">
-        <h1>produtos</h1>
-        <p>conheça todos os nossos produtos</p>
+        <h1 data-anime="400" class="fadeInDown">produtos</h1>
+        <p data-anime="800" class="fadeInDown">
+          conheça todos os nossos produtos
+        </p>
       </div>
     </section>
 
-    <section class="container produto_item">
+    <section class="container produto_item fadeInDown" data-anime="1200">
       <div class="grid-11">
         <img src="img/produtos/bikcraft-passeio-1.jpg" alt="Bikcraft Passeio" />
         <h2>passeio</h2>
       </div>
       <div class="grid-5 produto_icone">
-        <img src="img/produtos/passeio.svg" alt="Passeio" />
+        <img src="img/produtos/passeio.svg" alt="Icone Passeio" />
       </div>
       <div class="grid-8">
         <img src="img/produtos/bikcraft-passeio-2.jpg" alt="Bikcraft Passeio" />
@@ -66,7 +88,7 @@
         <h2>esporte</h2>
       </div>
       <div class="grid-5 produto_icone">
-        <img src="img/produtos/esporte.svg" alt="Esporte" />
+        <img src="img/produtos/esporte.svg" alt="Icone Esporte" />
       </div>
       <div class="grid-8">
         <img src="img/produtos/bikcraft-esporte-2.jpg" alt="Bikcraft Esporte" />
@@ -92,7 +114,7 @@
         <h2>retro</h2>
       </div>
       <div class="grid-5 produto_icone">
-        <img src="img/produtos/retro.svg" alt="Retro" />
+        <img src="img/produtos/retro.svg" alt="Icone Retro" />
       </div>
       <div class="grid-8">
         <img src="img/produtos/bikcraft-retro-2.jpg" alt="Bikcraft Retro" />
@@ -115,18 +137,45 @@
     <section class="orcamento">
       <div class="container">
         <h2 class="subtitulo">Orcamento</h2>
-        <form id="form_orcamento" class="form grid-8">
+        <form
+          id="form_orcamento"
+          method="POST"
+          action="enviar.php"
+          class="form grid-8 formPhp"
+        >
           <label for="nome">Nome</label>
-          <input type="text" id="nome">
+          <input type="text" id="nome" name="nome" required />
 
           <label for="email">E-mail</label>
-          <input type="text" id="email">
+          <input type="text" id="email" name="email" required />
 
           <label for="telefone">Telefone</label>
-          <input type="text" id="telefone">
+          <input type="text" id="telefone" name="telefone" />
 
-          <label for="espec">Especificações</label>
-          <textarea type="text" id="espec"></textarea>
+          <label class="nao_aparece"
+            >Se você não é um robô, deixe em branco</label
+          >
+          <input type="text" class="nao_aparece" name="leaveblank" />
+
+          <label class="nao_aparece"
+            >Se você não é um robô, deixe em branco</label
+          >
+          <input
+            type="text"
+            class="nao_aparece"
+            name="dontchange"
+            value="http://"
+          />
+
+          <label for="mensagem">Mensagem</label>
+          <textarea
+            id="enviar"
+            name="enviar"
+            type="text"
+            id="mensagem"
+            name="mensagem"
+            required
+          ></textarea>
 
           <button type="submit" class="btn">Enviar</button>
         </form>
@@ -147,7 +196,7 @@
       </div>
     </section>
 
-    <section class="quebra">
+    <div class="quebra">
       <blockquote class="quote_externo container">
         <p>
           "O verdadeiro segredo da felicidade está em ter um genuíno interesse
@@ -155,7 +204,7 @@
         </p>
         <cite>William Morris</cite>
       </blockquote>
-    </section>
+    </div>
 
     <footer>
       <div class="footer">

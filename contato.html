@@ -3,12 +3,31 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/normalize.css" />
-    <link rel="stylesheet" href="css/reset.css" />
-    <link rel="stylesheet" href="css/grid.css" />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/contato.css" />
-    <title>Bikcraft - Contato</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <title>Bikcraft - Contato - 51 99158 5101</title>
+
+    <meta
+      name="description"
+      content="Compre a sua bicicleta personalizada na Bikcraft. Possuímos modelos Passeio, Retrô e Esporte."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Bikcraft - Contato - 51 99158 5101" />
+    <meta
+      property="og:description"
+      content="Compre a sua bicicleta personalizada na Bikcraft. Possuímos modelos Passeio, Retrô e Esporte."
+    />
+    <meta property="og:url" content="http://bikcraft.com/contato.html" />
+    <meta property="og:image" content="http://bikcraft.com/img/og-image.png" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+
+
+    <script>document.documentElement.classList.add('js');</script>
+    <script src="./js/simple-anime.js" defer></script>
+    <script src="./js/simple-form.js" defer></script>
+    <script src="./js/script.js" defer></script>
   </head>
   <body>
     <header class="header">
@@ -29,24 +48,30 @@
 
     <section class="introducao_interna interna_contato">
       <div class="container">
-        <h1>contato</h1>
-        <p>tire as suas dúvidas com a gente</p>
+        <h1 data-anime="400" class="fadeInDown">contato</h1>
+        <p data-anime="800" class="fadeInDown">tire as suas dúvidas com a gente</p>
       </div>
     </section>
 
-    <section class="contato container">
-      <form id="form_contato" class="contato_form grid-8">
+    <section class="contato container fadeInDown formPhp" data-anime="800">
+      <form id="form_contato" method="POST" action="./enviar.php" class="contato_form grid-8">
         <label for="nome">Nome</label>
-        <input type="text" id="nome" />
+        <input type="text" id="nome" name="nome" required/>
 
         <label for="email">E-mail</label>
-        <input type="text" id="email" />
-
+        <input type="text" id="email" name="email" required>
+        
         <label for="telefone">Telefone</label>
-        <input type="text" id="telefone" />
+        <input type="text" id="telefone" name="telefone" />
 
-        <label for="espec">Especificações</label>
-        <textarea type="text" id="espec"></textarea>
+        <label class="nao_aparece">Se você não é um robô, deixe em branco</label>
+        <input type="text" class="nao_aparece" name="leaveblank">
+
+        <label class="nao_aparece">Se você não é um robô, deixe em branco</label>
+        <input type="text" class="nao_aparece" name="dontchange" value="http://">
+
+        <label for="mensagem">Mensagem</label>
+        <textarea id="enviar" name="enviar" type="text" id="mensagem" name="mensagem" required></textarea>
 
         <button type="submit" class="btn btn_preto">Enviar</button>
       </form>
@@ -83,7 +108,7 @@
       /></a>
     </section>
 
-    <section class="quebra">
+    <div class="quebra">
       <blockquote class="quote_externo container">
         <p>
           "O verdadeiro segredo da felicidade está em ter um genuíno interesse
@@ -91,7 +116,7 @@
         </p>
         <cite>William Morris</cite>
       </blockquote>
-    </section>
+    </div>
 
     <footer>
       <div class="footer">
